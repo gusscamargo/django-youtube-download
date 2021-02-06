@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperte no botão!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="center-align">Download Youtube video in High definition</h1>
+            </div>
+        </div>
+        <form action="/download" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col offset-l3 l6  offset-m4 m4 offset-s3 s6">
+                    <input name="video_link" id="video_link" type="text" class="validate" value="https://www.youtube.com/watch?v=NImeDE7ZM0E">
+                    <label for="video_link">Link</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="waves-effect waves-light btn-large pulse red" id="downloadButton" href="#">Download</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
